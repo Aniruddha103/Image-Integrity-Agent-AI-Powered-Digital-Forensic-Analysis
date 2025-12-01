@@ -67,31 +67,3 @@ This project is submitted as part of the **Kaggle AI Agents Intensive Capstone P
       "Noise variation anomalies"
   ]
 }
-
-**Architecture**
-          ┌─────────────────────────┐
-          │       User Input        │
-          │ (Text or Image Upload)  │
-          └────────────┬────────────┘
-                       │
-                       ▼
-          ┌─────────────────────────┐
-          │  Image Integrity Agent  │
-          │    (Google ADK)         │
-          └────────────┬────────────┘
-                       │
-        ┌──────────────┼────────────────┐
-        ▼                              ▼
- ┌──────────────┐               ┌──────────────┐
- │ on_text       │               │ on_binary     │
- └──────────────┘               └──────────────┘
-        │                              │
-        ▼                              ▼
- ┌──────────────┐               ┌────────────────────┐
- │ Gemini Flash │               │ Gemini Vision Model │
- └──────────────┘               └────────────────────┘
-                       │
-                       ▼
-             ┌───────────────────┐
-             │ Structured Report │
-             └───────────────────┘

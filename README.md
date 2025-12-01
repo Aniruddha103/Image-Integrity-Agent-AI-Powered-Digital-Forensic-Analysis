@@ -1,39 +1,97 @@
-# 📌 Image Integrity Agent  
-### A lightweight AI agent that detects image tampering using Google ADK + Gemini.
+# 🛡️ Image Integrity Agent  
+### AI-Powered Digital Image Forensics using Google ADK + Gemini 2.0 Flash
 
 ---
 
-## 🚀 Overview
+## 📌 Overview
 
-Image Integrity Agent is designed to identify digital image manipulation including:
+Digital image manipulation has become widespread due to powerful editing tools and generative models.  
+Detecting tampered images manually is slow, inconsistent, and requires forensic expertise.
 
-- Copy-move forgery  
-- Splicing  
-- Inpainting  
-- Resampling  
-- Metadata manipulation  
-- Noise pattern inconsistencies  
+**Image Integrity Agent** is an autonomous LLM-powered agent that performs:
 
-Powered by **Gemini 2.0 Flash** and the **Google Agent Development Kit (ADK)**, this agent accepts text or images and returns a structured forensic analysis.
+- Image authenticity triage  
+- Tampering classification  
+- Forensic artifact explanation  
+- Noise, texture, and compression anomaly analysis  
+- Structured report generation  
 
----
+The agent is built using the **Google Agent Development Kit (ADK)** and the **Gemini 2.0 Flash** model.
 
-## 🏗 Tech Stack
-
-| Component        | Technology Used |
-|-----------------|-----------------|
-| LLM Engine       | Gemini 2.0 Flash |
-| Agent Framework  | Google ADK |
-| API Server       | FastAPI |
-| Image Processing | Pillow, OpenCV |
-| Deployment       | Local or Cloud |
+This project is submitted as part of the **Kaggle AI Agents Intensive Capstone Project (Google × Kaggle)**.
 
 ---
 
-## 📦 Installation
+## 🎯 Goals of the Project
 
-Clone the repository:
+1. **Automate Digital Forensics**  
+   Provide fast, accessible tampering detection for journalists, investigators, students, and enterprises.
 
-```bash
-git clone https://github.com/Aniruddha103/Image-Integrity-Agent-AI-Powered-Digital-Forensic-Analysis.git
-cd image-integrity-agent
+2. **Demonstrate Agent Development Skills**  
+   Showcase practical use of ADK features such as:  
+   - LLM-powered agent  
+   - Handlers (`on_text`, `on_binary`)  
+   - Model configuration via `agent.yaml`  
+   - Agent runtime via FastAPI  
+   - Clean modular architecture  
+
+3. **Prepare a scalable foundation**  
+   Build a simple but extensible single-agent system that can later evolve into a full **multi-agent forensic pipeline**, including:
+   - YOLO-based region detection  
+   - Metadata extraction  
+   - Noise-level estimation  
+   - Evidence heatmaps  
+
+---
+
+## 🧠 What the Agent Can Do
+
+✔ Accept images as binary input  
+✔ Analyze them with Gemini  
+✔ Detect possible tampering types  
+✔ Provide human-readable forensic explanations  
+✔ Output structured JSON-like findings  
+✔ Respond to text queries for guidance  
+
+### Example Response:
+
+
+{
+  "tampered": true,
+  "confidence": 0.82,
+  "tampering_type": "Copy-Move Splicing",
+  "explanation": "The right side contains repeated patterns and inconsistent noise.",
+  "artifacts_detected": [
+      "Texture discontinuity",
+      "Edge inconsistencies",
+      "Noise variation anomalies"
+  ]
+}
+
+**Architecture**
+          ┌─────────────────────────┐
+          │       User Input        │
+          │ (Text or Image Upload)  │
+          └────────────┬────────────┘
+                       │
+                       ▼
+          ┌─────────────────────────┐
+          │  Image Integrity Agent  │
+          │    (Google ADK)         │
+          └────────────┬────────────┘
+                       │
+        ┌──────────────┼────────────────┐
+        ▼                              ▼
+ ┌──────────────┐               ┌──────────────┐
+ │ on_text       │               │ on_binary     │
+ └──────────────┘               └──────────────┘
+        │                              │
+        ▼                              ▼
+ ┌──────────────┐               ┌────────────────────┐
+ │ Gemini Flash │               │ Gemini Vision Model │
+ └──────────────┘               └────────────────────┘
+                       │
+                       ▼
+             ┌───────────────────┐
+             │ Structured Report │
+             └───────────────────┘

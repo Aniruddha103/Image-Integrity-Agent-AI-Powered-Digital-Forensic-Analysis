@@ -1,0 +1,8 @@
+google-adk
+google-generativeai
+python-dotenv
+Pillow
+opencv-python
+numpy
+fastapi
+uvicorn

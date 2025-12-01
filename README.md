@@ -67,3 +67,20 @@ This project is submitted as part of the **Kaggle AI Agents Intensive Capstone P
       "Noise variation anomalies"
   ]
 }
+## 🏗 Tech Stack
+
+| Component        | Technology Used |
+|-----------------|-----------------|
+| LLM Engine       | Gemini 2.0 Flash |
+| Agent Framework  | Google ADK |
+| API Server       | FastAPI |
+| Image Processing | Pillow, OpenCV |
+| Deployment       | Local or Cloud |
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+git clone https://github.com/Aniruddha103/Image-Integrity-Agent-AI-Powered-Digital-Forensic-Analysis.git
+cd image-integrity-agent

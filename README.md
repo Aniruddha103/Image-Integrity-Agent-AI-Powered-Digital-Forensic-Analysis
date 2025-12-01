@@ -83,4 +83,5 @@ This project is submitted as part of the **Kaggle AI Agents Intensive Capstone P
 
 Clone the repository:
 git clone https://github.com/Aniruddha103/Image-Integrity-Agent-AI-Powered-Digital-Forensic-Analysis.git
+
 cd image-integrity-agent

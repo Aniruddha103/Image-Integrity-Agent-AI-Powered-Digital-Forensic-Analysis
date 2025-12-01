@@ -32,8 +32,8 @@ Powered by **Gemini 2.0 Flash** and the **Google Agent Development Kit (ADK)**, 
 
 ## 📦 Installation
 
+Clone the repository:
+
 ```bash
-git clone https://github.com/<your-username>/image-integrity-agent
+git clone https://github.com/Aniruddha103/Image-Integrity-Agent-AI-Powered-Digital-Forensic-Analysis.git
 cd image-integrity-agent
-pip install -r requirements.txt
-cp .env.example .env
